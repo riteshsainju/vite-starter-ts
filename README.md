@@ -1,4 +1,4 @@
-## [vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) + [Vitest](https://vitest.dev/)+ [Eslint](https://eslint.org/) + [Atomic Design Pattern](https://bradfrost.com/blog/post/atomic-web-design/) + [Ant Design 5.0](https://ant.design/) Starter
+## [vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) + [Vitest](https://vitest.dev/)+ [Eslint](https://eslint.org/) + [Atomic Design Pattern](https://bradfrost.com/blog/post/atomic-web-design/) + [Tailwind CSS](https://tailwindcss.com/) Starter
 
 This setup includes:
 
@@ -7,7 +7,7 @@ This setup includes:
 - [vitest](https://vitest.dev/), [jsdom](https://github.com/jsdom/jsdom), [@testing-library](https://testing-library.com/)
 - [react-router v6](https://reactrouter.com/en/main)
 - [atomic design pattern](https://bradfrost.com/blog/post/atomic-web-design/)
-- [Ant Design 5.0](https://ant.design/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 # References
 
