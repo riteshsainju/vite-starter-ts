@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import Button from './Button';
 
 describe('Button Component', () => {
@@ -20,10 +20,10 @@ describe('Button Component', () => {
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 
-  it('renders with the correct type attribute', () => {
-    const { getByText } = render(<Button type="submit">Submit</Button>);
-    const button = getByText('Submit');
-
-    expect(button.getAttribute('type')).toBe('submit');
+  it('renders with a custom class name', () => {
+    render(<Button className="custom-button">Custom Button</Button>);
+    const textContentElement = screen.getByText('Custom Button');
+    const button = textContentElement.parentNode;
+    expect(button).toHaveClass('custom-button');
   });
 });

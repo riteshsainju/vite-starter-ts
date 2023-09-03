@@ -1,24 +1,20 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable react/button-has-type */
-import React, { MouseEvent } from 'react';
+import { Button as AntButton } from 'antd';
 
 interface ButtonProps {
   children: React.ReactNode;
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
-  type?: 'button' | 'submit' | 'reset';
+  className?: string;
+  onClick?: () => void;
+  type?: 'link' | 'text' | 'default' | 'primary' | 'dashed';
 }
 
-function Button({ children, onClick, type }: ButtonProps) {
-  // const Button: FC<ButtonProps> = ({ children, onClick, type = 'button' }) => {
+function Button({ children, onClick, className, type }: ButtonProps) {
   return (
-    <button type={type} onClick={onClick}>
+    <AntButton className={className} type={type} onClick={onClick}>
       {children}
-    </button>
+    </AntButton>
   );
 }
-
-Button.defaultProps = {
-  type: 'button',
-};
 
 export default Button;
