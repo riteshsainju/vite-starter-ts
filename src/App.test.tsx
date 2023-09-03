@@ -1,6 +1,7 @@
 import { MemoryRouter } from 'react-router-dom';
-import { App, WrappedApp } from './App';
+import WrappedApp from './App';
 import { render, screen } from './utils/test-utils';
+import AppRouter from './AppRouter';
 
 describe('App', () => {
   it('Renders hello world', () => {
@@ -17,7 +18,7 @@ describe('App', () => {
   it('Renders not found if invalid path', () => {
     render(
       <MemoryRouter initialEntries={['/this-route-does-not-exist']}>
-        <App />
+        <AppRouter />
       </MemoryRouter>
     );
     expect(
