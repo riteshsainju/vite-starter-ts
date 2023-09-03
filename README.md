@@ -1,4 +1,4 @@
-## [vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) + [Vitest](https://vitest.dev/)+ [Eslint](https://eslint.org/) + [Atomic Design Pattern](https://bradfrost.com/blog/post/atomic-web-design/) + [Tailwind CSS](https://tailwindcss.com/) Starter
+## [vite](https://vitejs.dev/) + [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/) + [Vitest](https://vitest.dev/)+ [Eslint](https://eslint.org/) + [Atomic Design Pattern](https://bradfrost.com/blog/post/atomic-web-design/) + [Tailwind CSS](https://tailwindcss.com/) + [Ant Design 5](https://ant.design/) Starter
 
 This setup includes:
 
@@ -8,6 +8,7 @@ This setup includes:
 - [react-router v6](https://reactrouter.com/en/main)
 - [atomic design pattern](https://bradfrost.com/blog/post/atomic-web-design/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Ant Design 5](https://ant.design/)
 
 # References
 
