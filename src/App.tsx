@@ -1,10 +1,15 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRouter from './AppRouter';
+import { AuthContextProvider } from './context/AuthContext';
 
-export default function WrappedApp() {
+const WrappedApp = () => {
   return (
-    <Router>
-      <AppRouter />
-    </Router>
+    <AuthContextProvider>
+      <Router>
+        <AppRouter />
+      </Router>
+    </AuthContextProvider>
   );
-}
+};
+
+export default WrappedApp;

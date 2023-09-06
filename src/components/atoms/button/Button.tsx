@@ -9,12 +9,12 @@ interface ButtonProps {
   type?: 'link' | 'text' | 'default' | 'primary' | 'dashed';
 }
 
-function Button({ children, onClick, className, type }: ButtonProps) {
+const Button = ({ children, onClick, className, type }: ButtonProps) => {
   return (
     <AntButton className={className} type={type} onClick={onClick}>
       {children}
     </AntButton>
   );
-}
+};
 
 export default Button;

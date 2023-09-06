@@ -1,17 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-import About from './components/pages/About';
-import Home from './components/pages/Home';
-import NotFound from './components/pages/NotFound';
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
+import Loader from './components/atoms/loader';
+import { IndexLayout } from './components/layouts';
+import { ROUTES } from './config';
 
-function AppRouter() {
+const AppRouter = () => {
+  const Routes = useRoutes(ROUTES);
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route element={<NotFound />} path="*" />
-    </Routes>
+    <React.Suspense fallback={<Loader />}>
+      <IndexLayout>{Routes}</IndexLayout>
+    </React.Suspense>
   );
-}
+};
 
 export default AppRouter;
