@@ -1,24 +1,30 @@
-import { NavLink } from 'react-router-dom';
+import { useAuthContext } from 'src/context/AuthContext';
 import { Button } from '../atoms';
 
-function Home() {
-  const handleClick = () => {
-    alert('Clicked');
+const Home = () => {
+  const stateContext = useAuthContext();
+  const { dispatch } = stateContext || {};
+
+  const handleLogout = () => {
+    localStorage.removeItem('_users');
+    dispatch({
+      type: 'SET_USER',
+      payload: null,
+    });
   };
 
   return (
-    <>
-      <h1 className="text-3xl font-bold text-red-600 my-5">Hello World</h1>
-      <div className="p-8">
-        <NavLink to="/about">
-          <h5 className="text-blue-500 underline">Go to Home</h5>
-        </NavLink>
-        <Button onClick={handleClick} type="default" className="my-5">
-          Click Me
+    <div className="text-center w-full mt-20">
+      <h1 className="text-4xl font-bold text-blue-500 my-5">
+        Welcome to Dashboard
+      </h1>
+      <div className="p-8 m-2">
+        <Button onClick={handleLogout} type="default" className="my-5">
+          Logout
         </Button>
       </div>
-    </>
+    </div>
   );
-}
+};
 
 export default Home;

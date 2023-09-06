@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-function About() {
+const About = () => {
   return (
     <>
       <h1 className="text-3xl font-bold text-red-600 my-5">About Page</h1>
@@ -11,6 +11,6 @@ function About() {
       </div>
     </>
   );
-}
+};
 
 export default About;
